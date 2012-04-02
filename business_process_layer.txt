@@ -1,0 +1,25 @@
+%META{"parent"}%
+
+%IF{"'%USERNAME%' ingroup 'EessiReviewerGroup'" then="" else='
+<form action="%SCRIPTURLPATH{edit}%/%WEB%" method="post"> <input type="hidden" name="templatetopic" value="RequirementsTemplate" /> <input type="hidden" name="topicparent" value="%TOPIC%" /> <input type="hidden" name="topic" value="BusPrAUTOINC00001"></input> <input type="hidden" name="action" value="form"></input> <input type="hidden" name="RequirementLevel" value="EessiLevel"></input> <input type="submit" value="Create Requirement"></input> </form>'}%
+
+---++ %TOPIC% requirements:
+%TABLE{sort="on" columnwidths="5%,15%,30%,25%,5%,5%,10%,5%"}%
+%SEARCH{ type="query" "form.name = 'RequirementsForm'  and parent.name = '%TOPIC%' " nonoise="on"
+header="| *Id* | *Short description* | *Description* | *Rationale* | *Characteristic* | *Originates from* | *Source* | *Status* |"
+format="| $topic | $formfield(Short description) | $formfield(Description) | $formfield(Rationale) | $formfield(Characteristic) | $formfield(Originates From) | $formfield(Source) |  $formfield(Status) |" }%
+
+%IF{"'%USERNAME%' ingroup 'EessiReviewerGroup'" then="" else='
+<form action="%SCRIPTURLPATH{edit}%/%WEB%" method="post"> <input type="hidden" name="templatetopic" value="RequirementsTemplate" /> <input type="hidden" name="topicparent" value="%TOPIC%" /> <input type="hidden" name="topic" value="BusPrAUTOINC00001"></input> <input type="hidden" name="action" value="form"></input> <input type="hidden" name="RequirementLevel" value="EessiLevel"></input> <input type="submit" value="Create Requirement"></input> </form>'}%
+
+<hr/>
+
+<!--OUTPUT:above--><!--OUTPUT:threadmode-->
+
+<!--/OUTPUT:threadmode--><!--/OUTPUT:above-->
+
+%COMMENT%
+<!--
+   * Set ALLOWTOPICCHANGE = EessiReviewerGroup
+-->
+<br />
